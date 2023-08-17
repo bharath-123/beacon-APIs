@@ -1,3 +1,8 @@
+ProposerBuilderCommitment:
+  type: string
+  description: "A string which describes the commitment between the proposer and builder. The trusted PEPC-Boost relayer will be the source of truth for verifying whether these commitments are accurate or not"
+  example: "FULL_BLOCK" # this commitment indicates that the builder has to build a full block for the proposer
+
 Pubkey:
   type: string
   format: hex
