@@ -14,9 +14,9 @@ ValidatorRegistration:
     pubkey:
       $ref: 'primitive.yaml#/Pubkey'
       description: "BLS public key of validator."
-    proposer_builder_commitment:
-      $ref: 'primitive.yaml#/ProposerBuilderCommitment'
-      description: "Proposer builder commitment type"
+    proposer_commitment:
+      $ref: 'primitive.yaml#/ProposerCommitment'
+      description: "Proposer commitment type"
 
 SignedValidatorRegistration:
   type: object
