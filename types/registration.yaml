@@ -29,7 +29,7 @@ SignedValidatorRegistration:
 ValidatorRegistrationV2:
   type: object
   description: "The `ValidatorRegistration` object from the Builder API specification."
-  required: [fee_recipient, gas_limit, timestamp, pubkey]
+  required: [fee_recipient, gas_limit, timestamp, pubkey, builder_pubkey, proposal_epoch, can_accept_trusted_payments]
   properties:
     fee_recipient:
       $ref: 'primitive.yaml#/ExecutionAddress'
@@ -43,6 +43,15 @@ ValidatorRegistrationV2:
     pubkey:
       $ref: 'primitive.yaml#/Pubkey'
       description: "BLS public key of validator."
+    builder_pubkey:
+      $ref: 'primitive.yaml#/Pubkey'
+      description: "Domain of builder."
+    proposal_epoch:
+      $ref: 'primitive.yaml#/Uint64'
+      description: "Epoch of proposal."
+    can_accept_trusted_payments:
+      type: boolean
+      description: "Whether the validator can accept trusted payments from the builder."
 
 SignedValidatorRegistrationV2:
   type: object
